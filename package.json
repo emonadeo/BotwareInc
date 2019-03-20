@@ -1,0 +1,23 @@
+{
+  "name": "botwareinc",
+  "version": "0.1.0",
+  "description": "Bot for Software Inc. Discord Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emonadeo/BotwareInc.git"
+  },
+  "author": "Emonadeo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emonadeo/BotwareInc/issues"
+  },
+  "homepage": "https://github.com/Emonadeo/BotwareInc#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "express": "^4.16.4"
+  }
+}
