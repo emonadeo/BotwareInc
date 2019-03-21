@@ -1,4 +1,3 @@
-const fs = require('fs');
 const discord = require('discord.js');
 
 // Require Token
