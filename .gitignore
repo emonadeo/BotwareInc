@@ -4,4 +4,4 @@ node_modules/
 .idea/
 
 # Discord Bot Token
-token.txt
+token.js
