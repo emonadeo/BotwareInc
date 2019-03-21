@@ -12,8 +12,4 @@ server.use(bodyParser.json());
 // Use Routes
 server.use('/webhooks', webhooks);
 
-// Start the server
-const PORT = process.env.PORT || 8080;
-server.listen(PORT, () => {
-    console.log(`SERVER: Listening on port ${PORT}`);
-});
+module.exports = server;
