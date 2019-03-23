@@ -1,4 +1,10 @@
 module.exports = (msg, cmd, args) => {
-    msg.channel.send('Here\'s a list of all available commands:');
-    // TODO: Print a list of commands
+    const cmds = require('../commands');
+    let help = '';
+    for(let label in cmds) {
+        if(label !== 'help') {
+            help += `\`!${label}\` — ${cmds[label].description}\n`;
+        }
+    }
+    msg.channel.send(help);
 };
