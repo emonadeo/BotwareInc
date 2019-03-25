@@ -9,7 +9,7 @@ module.exports = async (msg, cmd, args) => {
         const item = xml.rss.channel[0].item[0];
         const data = {
             'EntryTitle': item.title[0],
-            'EntryURL': item.link[0],
+            'EntryUrl': item.link[0],
             'EntryContent': item.description[0],
             'EntryPublished': 'null'
         };
