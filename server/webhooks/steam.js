@@ -4,13 +4,18 @@ const feed = require('../../bot/feed');
 
 const color = 0x000000; // Black
 
-exports.serve = function(req, res) {
-    const data = req.body;
+exports.convert = function(data, feed) {
     const item = new discord.RichEmbed()
-        .setColor(color)
         .setTitle(data['EntryTitle'])
-        .setURL(data['EntryUrl'])
-        .setFooter("Steam Announcement", 'https://i.imgur.com/hw7MOpR.png');
+        .setURL(data['EntryUrl']);
+
+    if(feed) {
+        item.setColor(color);
+        item.setFooter("Steam Announcement", 'https://i.imgur.com/hw7MOpR.png');
+    } else {
+        item.setFooter("Changelog")
+    }
+
 
     // First Paragraph
     const desc = data['EntryContent'];
@@ -31,8 +36,12 @@ exports.serve = function(req, res) {
     date_str = date_str.split('at').join();
     item.setTimestamp(new Date(date_str));
 
+    return item;
+};
+
+exports.serve = function(req, res) {
     // Post Item
-    feed.post(feed.channels.steam, item);
+    feed.post(feed.channels.steam, this.convert(req.data, true));
 
     res.end();
 };

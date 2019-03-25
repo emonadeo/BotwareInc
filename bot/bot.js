@@ -10,8 +10,6 @@ const bot = new discord.Client();
 
 // Message Event
 bot.on('message', msg => {
-    console.log(msg.content);
-
     if(!(msg.content.charAt(0) === cmdPrefix))
         return; // Message not starting with 'cmdPrefix'
 
