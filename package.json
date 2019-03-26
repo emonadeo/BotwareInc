@@ -5,7 +5,6 @@
   "description": "Bot for Software Inc. Discord Server",
   "main": "index.js",
   "scripts": {
-    "deploy": "gcloud app deploy",
     "start": "node index.js"
   },
   "repository": {

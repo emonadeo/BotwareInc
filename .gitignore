@@ -2,6 +2,3 @@ node_modules/
 
 # IDE
 .idea/
-
-# Discord Bot Token
-token.js
