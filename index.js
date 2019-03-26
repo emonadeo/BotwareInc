@@ -18,5 +18,6 @@ bot.login(process.env.TOKEN);
 
 // Keep App Alive
 setInterval(() => {
+    console.log('Verify Online-Status');
     http.get(process.env.DOMAIN);
 }, 280000);
